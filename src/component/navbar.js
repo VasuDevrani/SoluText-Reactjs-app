@@ -11,7 +11,7 @@ export default function Navbar(props) {
             className={`navbar-brand fs-3 text-${props.mystyle.color}`}
             href="/"
           >
-            <b>Navbar</b>
+            <b>SoluText</b>
           </a>
           <button
             className="navbar-toggler"
