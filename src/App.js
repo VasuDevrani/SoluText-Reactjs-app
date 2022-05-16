@@ -2,7 +2,9 @@ import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./component/navbar.js";
 import Container from "./component/container.js";
+import About from "./component/about.js";
 import React, { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [myStyle, setStyle] = useState({
@@ -62,7 +64,10 @@ function App() {
         toggleD={toggleD}
         toggleL={toggleL}
       />
-      <Container mystyle={myStyle} />
+      <Routes>
+        <Route path="/" element={<Container mystyle={myStyle} />} />
+        <Route path="about" element={<About />} />
+      </Routes>
     </>
   );
 }

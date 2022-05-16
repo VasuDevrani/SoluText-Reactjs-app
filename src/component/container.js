@@ -63,7 +63,9 @@ export default function Container(props) {
       </div>
       <div className="text-center text-sm-start">
       <h2 className="mt-4">Text Count</h2>
-      <p>{text.length} characters {text.split(" ").length-1} words</p>
+      <p>{text.length} characters {text.split(/\s+/).filter((e)=>{
+        return e.length!=0
+      }).length} words</p>
       </div>
       </div>
     </>
